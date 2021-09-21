@@ -4,7 +4,7 @@ set -eu
 set -o pipefail
 
 # Prepare repo
-git remote add upstream "https://github.com/${UPSTREAM_REPO}.git"
+git remote add upstream "https://github.com/${UPSTREAM_REPO:-elastic/beats}.git"
 
 ## Fetch tags from all remotes (otherwise we do not know about origin tags)
 git fetch --tags --all --force --quiet
